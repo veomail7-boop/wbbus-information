@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Buses - WBBus.iN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-content">
+                <div class="contact-info">
+                    <span>Email : contact@wbbus.in</span>
+                </div>
+                <div class="social-links">
+                    <span>Follow Us :</span>
+                    <a href="https://www.facebook.com/profile.php?id=61555228523409" target="_blank">Facebook</a>
+                    <a href="http://t.me/wbbus" target="_blank">Telegram</a>
+                    <a href="https://whatsapp.com/channel/0029VaMzF271HspvaWVIey1O" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="index.html">WBBUS.IN</a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="government.html" class="nav-link">Government</a>
+                    <a href="private.html" class="nav-link">Private</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>All Bus Services</h1>
+            <p>Complete list of bus services operating in West Bengal</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <h3>Filter Buses</h3>
+                <div class="filter-row">
+                    <select class="filter-select" id="bus-type-filter">
+                        <option value="">All Bus Types</option>
+                        <option value="government">Government</option>
+                        <option value="private">Private</option>
+                    </select>
+                    <select class="filter-select" id="route-filter">
+                        <option value="">All Routes</option>
+                        <option value="kolkata">From Kolkata</option>
+                        <option value="purulia">From Purulia</option>
+                        <option value="bardhaman">From Bardhaman</option>
+                        <option value="other">Other Routes</option>
+                    </select>
+                    <input type="text" class="filter-input" id="search-filter" placeholder="Search by bus name or route...">
+                    <button class="filter-btn" id="clear-filters">Clear Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Buses Section -->
+    <section class="all-buses-section">
+        <div class="container">
+            <div class="buses-header">
+                <h2>All Available Buses</h2>
+                <div class="results-count">
+                    <span id="results-count">Showing all buses</span>
+                </div>
+            </div>
+
+            <div class="bus-grid" id="all-buses-grid">
+                <!-- Government Buses -->
+                <a href="bus-detail.html" class="bus-card" data-type="government" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753813332-WB29E6062.webp" alt="WBSTC Bus">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">WBSTC Express</h3>
+                        <p class="bus-route">Kolkata - Digha</p>
+                        <span class="bus-type government">Government</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="government" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753461628-WB55B6775.webp" alt="WBSTC Bus">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">WBSTC Super</h3>
+                        <p class="bus-route">Kolkata - Siliguri</p>
+                        <span class="bus-type government">Government</span>
+                    </div>
+                </a>
+
+                <!-- Private Buses -->
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753813332-WB29E6062.webp" alt="BISWA BINA">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">BISWA BINA</h3>
+                        <p class="bus-route">Kolkata-Garhbeta</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="purulia">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753461628-WB55B6775.webp" alt="HILLTOP SUPER">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">HILLTOP SUPER</h3>
+                        <p class="bus-route">Purulia-Baghmundi</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="purulia">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753460325-WB55B6775.webp" alt="HILLTOP SUPER">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">HILLTOP SUPER</h3>
+                        <p class="bus-route">Ajodhya Hills-Purulia</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="other">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753378704-WB494546.webp" alt="RUPKATHA">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">RUPKATHA</h3>
+                        <p class="bus-route">Rohini-Kolkata (Esplaned)</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="bardhaman">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753288372-WB41K2045.webp" alt="RAJLAXMI">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">RAJLAXMI</h3>
+                        <p class="bus-route">Bardhaman-Bishnupur</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="other">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753206010-WB55B6653.webp" alt="BARTAMAN">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">BARTAMAN</h3>
+                        <p class="bus-route">Arsha-Bandwan</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753202344-WB870588.webp" alt="SREEDHAR">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">SREEDHAR</h3>
+                        <p class="bus-route">Moynapur-Kolkata (Esplaned)</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="private" data-route="other">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1752774795-WB15A0564.webp" alt="APANJAN">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">APANJAN</h3>
+                        <p class="bus-route">Tarkeshwar-Fulkusma</p>
+                        <span class="bus-type private">Private</span>
+                    </div>
+                </a>
+
+                <!-- Additional Government Buses -->
+                <a href="bus-detail.html" class="bus-card" data-type="government" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753378704-WB494546.webp" alt="WBSTC Bus">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">WBSTC Regular</h3>
+                        <p class="bus-route">Kolkata - Durgapur</p>
+                        <span class="bus-type government">Government</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="government" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753288372-WB41K2045.webp" alt="WBSTC Bus">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">WBSTC Express</h3>
+                        <p class="bus-route">Kolkata - Malda</p>
+                        <span class="bus-type government">Government</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="government" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1753206010-WB55B6653.webp" alt="WBSTC Bus">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">WBSTC Super</h3>
+                        <p class="bus-route">Kolkata - Bankura</p>
+                        <span class="bus-type government">Government</span>
+                    </div>
+                </a>
+
+                <a href="bus-detail.html" class="bus-card" data-type="government" data-route="kolkata">
+                    <div class="bus-image">
+                        <img src="https://wbbus.in/storage/uploads/bus_image/1752774795-WB15A0564.webp" alt="WBSTC Bus">
+                    </div>
+                    <div class="bus-info">
+                        <h3 class="bus-name">WBSTC Express</h3>
+                        <p class="bus-route">Kolkata - Purulia</p>
+                        <span class="bus-type government">Government</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="load-more-btn">Load More Buses</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>WBBUS.IN</h3>
+                    <p>WBBUS.IN is a website to serve you the 'Time Table' and 'Route Informations' of Privet and Goverment buses running in West Bengal territory</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="government.html">Goverment Bus</a></li>
+                        <li><a href="private.html">Private Bus</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Social Links</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=61555228523409" target="_blank">Facebook</a></li>
+                        <li><a href="http://t.me/wbbus" target="_blank">Telegram</a></li>
+                        <li><a href="https://whatsapp.com/channel/0029VaMzF271HspvaWVIey1O" target="_blank">Whatsapp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed & Developed By SS Digital Ocean Copyright © 2025 WBBUS.IN</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter functionality for all buses page
+        document.addEventListener('DOMContentLoaded', function() {
+            const busTypeFilter = document.getElementById('bus-type-filter');
+            const routeFilter = document.getElementById('route-filter');
+            const searchFilter = document.getElementById('search-filter');
+            const clearFiltersBtn = document.getElementById('clear-filters');
+            const resultsCount = document.getElementById('results-count');
+            const busCards = document.querySelectorAll('.bus-card');
+
+            function filterBuses() {
+                const typeValue = busTypeFilter.value.toLowerCase();
+                const routeValue = routeFilter.value.toLowerCase();
+                const searchValue = searchFilter.value.toLowerCase();
+                let visibleCount = 0;
+
+                busCards.forEach(card => {
+                    const cardType = card.getAttribute('data-type');
+                    const cardRoute = card.getAttribute('data-route');
+                    const busName = card.querySelector('.bus-name').textContent.toLowerCase();
+                    const busRoute = card.querySelector('.bus-route').textContent.toLowerCase();
+
+                    let showCard = true;
+
+                    // Filter by type
+                    if (typeValue && cardType !== typeValue) {
+                        showCard = false;
+                    }
+
+                    // Filter by route
+                    if (routeValue && cardRoute !== routeValue) {
+                        showCard = false;
+                    }
+
+                    // Filter by search
+                    if (searchValue && !busName.includes(searchValue) && !busRoute.includes(searchValue)) {
+                        showCard = false;
+                    }
+
+                    if (showCard) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Update results count
+                resultsCount.textContent = `Showing ${visibleCount} of ${busCards.length} buses`;
+            }
+
+            // Add event listeners
+            busTypeFilter.addEventListener('change', filterBuses);
+            routeFilter.addEventListener('change', filterBuses);
+            searchFilter.addEventListener('input', debounce(filterBuses, 300));
+
+            // Clear filters
+            clearFiltersBtn.addEventListener('click', function() {
+                busTypeFilter.value = '';
+                routeFilter.value = '';
+                searchFilter.value = '';
+                filterBuses();
+            });
+
+            // Load more functionality (placeholder)
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            loadMoreBtn.addEventListener('click', function() {
+                this.textContent = 'Loading...';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.textContent = 'No more buses to load';
+                    this.disabled = true;
+                }, 1000);
+            });
+        });
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+    </script>
+</body>
+</html>
